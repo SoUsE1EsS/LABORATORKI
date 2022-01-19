@@ -32,18 +32,27 @@ int main()
 	cout << "\nMAX_FLOAT:" << max_float << "\nMIN_FLOAT:" << min_float <<"\nsize:"<<sizeof(float)<<endl;
 	cout << "\nMAX_DOUBLE:" << max_double << "\nMIN_DOUBLE:" << min_double <<"\nsize:"<<sizeof(double)<< endl;
 	//3
-	/*cout << "Введите число" << endl;
-	cin >>a;
-	cout << "Я не понял как вывести в двоичной" << endl;
-	cout << "Ваше число в системе счисления с основанием 16:" << hex << a << endl;
-	cout << "bool"<<static_cast<bool>(a) << endl;
-	cout << "double" << static_cast<double>(a) << endl;
-	cout << "char" << static_cast<char>(a) << endl;*/
+	int number;
+	cout << "Введите число: " << endl;
+	cin >> number;
+	cout << "В бинарном виде" << "\t" << convertNumberToBin(number) << endl;
+	
+	if (number > 0) {
+		cout << "В шестнадцатиричном виде" << "\t" << hex << number << dec << endl;
+	}
+	else {
+		cout << "В шестнадцатиричном виде" << "\t" << "-" << hex << abs(number) << dec << endl;
+	}
 
-
-
-
-
+	cout << "int" << "\t" << (int)(number) << endl;
+	cout << "unsigned int" << "\t" << (unsigned int)(number) << endl;
+	cout << "short" << "\t" << (short)(number) << endl;
+	cout << "unsigned short" << "\t" << (unsigned short)(number) << endl;
+	cout << "long" << "\t" << (long)(number) << endl;
+	cout << "long long" << "\t" << (long long)(number) << endl;
+	cout << "double" << "\t" << (double)(number) << endl;
+	cout << "char" << "\t" << (char)(number) << endl;
+	cout << "bool" << "\t" << (bool)(number) << endl;
 
 
 	//4
